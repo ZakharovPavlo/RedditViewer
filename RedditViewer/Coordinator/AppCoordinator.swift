@@ -22,7 +22,7 @@ class AppCoordinator: NSObject, Coordinator {
         self.lastLinkStorage = LastLinkStorage()
     }
 
-    func applicationWillResignActive() {
+    func applicationWillTerminate() {
         lastLinkStorage.storeLastLink()
     }
 
