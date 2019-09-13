@@ -28,6 +28,10 @@ class RedditListCoordinator: NSObject, Coordinator {
 
     private var lastLinkStorage: LastLinkStorage
 
+    fileprivate enum Constants {
+        static let redditListStoryboard = "RedditListViewController"
+    }
+
     init(context: UIViewController, lastLinkStorage: LastLinkStorage) {
         self.context = context
         self.lastLinkStorage = lastLinkStorage
@@ -36,7 +40,7 @@ class RedditListCoordinator: NSObject, Coordinator {
     }
 
     func start() {
-        let sb = UIStoryboard(name: GlobalConstants.redditListStoryboard, bundle: Bundle.main)
+        let sb = UIStoryboard(name: Constants.redditListStoryboard, bundle: Bundle.main)
         if let vc = sb.instantiateInitialViewController() as? RedditListViewController {
             presentedViewController = vc
             presentedViewController?.delegate = self
