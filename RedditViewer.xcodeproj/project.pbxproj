@@ -115,13 +115,13 @@
 			children = (
 				49718273232B90590036908C /* Application */,
 				49718272232B904C0036908C /* Coordinator */,
-				4971826F232B90360036908C /* Presenter */,
-				4971826E232B90200036908C /* View */,
-				49718270232B903E0036908C /* Model */,
 				4971829A232BA8F60036908C /* Extensions */,
-				49718271232B90450036908C /* Service */,
+				49718270232B903E0036908C /* Model */,
+				4971826F232B90360036908C /* Presenter */,
 				49718274232B90830036908C /* Resources */,
+				49718271232B90450036908C /* Service */,
 				49718275232B90980036908C /* Supporting Files */,
+				4971826E232B90200036908C /* View */,
 			);
 			path = RedditViewer;
 			sourceTree = "<group>";
