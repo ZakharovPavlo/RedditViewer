@@ -22,22 +22,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="redditPostCell" rowHeight="201" id="ruB-df-soR" customClass="PostCell" customModule="RedditViewer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="201"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="redditPostCell" rowHeight="237" id="ruB-df-soR" customClass="PostCell" customModule="RedditViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="237"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ruB-df-soR" id="H9L-ie-gNB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="236.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-Uz-qAf">
-                                                    <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                                    <rect key="frame" x="20" y="20" width="150" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="4n0-DU-PQg"/>
-                                                        <constraint firstAttribute="width" constant="100" id="prN-fD-feF"/>
+                                                        <constraint firstAttribute="height" constant="150" id="4n0-DU-PQg"/>
+                                                        <constraint firstAttribute="width" constant="150" id="prN-fD-feF"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iJZ-dU-rJu">
-                                                    <rect key="frame" x="20" y="160" width="374" height="20.5"/>
+                                                    <rect key="frame" x="20" y="196" width="374" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNH-YJ-Xu5">
                                                             <rect key="frame" x="0.0" y="0.0" width="124.5" height="20.5"/>
@@ -60,16 +60,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aWU-K8-isa">
-                                                    <rect key="frame" x="128" y="20" width="266" height="132"/>
+                                                    <rect key="frame" x="178" y="20" width="216" height="168"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-tb-wlp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="266" height="23"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="216" height="23"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-Z3-Tmk">
-                                                            <rect key="frame" x="0.0" y="23" width="266" height="109"/>
+                                                            <rect key="frame" x="0.0" y="23" width="216" height="145"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                     </subviews>
