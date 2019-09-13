@@ -8,18 +8,26 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
 class AppCoordinator: NSObject, Coordinator {
     var context: UIViewController
 
     var childCoordinator: Coordinator?
 
+    var lastLinkStorage: LastLinkStorage
+    
     init(context: UIViewController) {
         self.context = context
+        self.lastLinkStorage = LastLinkStorage()
+    }
+
+    func applicationWillResignActive() {
+        lastLinkStorage.storeLastLink()
     }
 
     func start() {
-        let redditListCoordinator = RedditListCoordinator(context: context)
+        let redditListCoordinator = RedditListCoordinator(context: context, lastLinkStorage: lastLinkStorage)
         redditListCoordinator.delegate = self
         childCoordinator = redditListCoordinator
         childCoordinator?.start()

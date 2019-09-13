@@ -26,10 +26,11 @@ class RedditListCoordinator: NSObject, Coordinator {
 
     private var childCoordinator: Coordinator?
 
-    private var lastUrl: String?
+    private var lastLinkStorage: LastLinkStorage
 
-    init(context: UIViewController) {
+    init(context: UIViewController, lastLinkStorage: LastLinkStorage) {
         self.context = context
+        self.lastLinkStorage = lastLinkStorage
         apiService = APIService()
         thumbmnailLoader = ThubmnailLoader()
     }
@@ -42,7 +43,11 @@ class RedditListCoordinator: NSObject, Coordinator {
             let presenter = RedditListPresenter(apiService: self.apiService, thumbnailLoader: thumbmnailLoader)
             presenter.view = vc
             vc.presenter = presenter
-            (context as? UINavigationController)?.pushViewController(vc, animated: true)
+            (context as? UINavigationController)?.pushViewController(vc, animated: true, completion: { [weak self] in
+                if let lastLink = self?.lastLinkStorage.getLink() {
+                    self?.showDetailsCoordinatorWithUrl(url: lastLink)
+                }
+            })
         }
     }
 
@@ -57,6 +62,7 @@ extension RedditListCoordinator: RedditListViewControllerDelegate {
         _ = post.preview?.images.first?.source.url
         /* This Urls for some reason doesnt work and any of preview urls gives 403 Forbidden error
         So i decided to show post url itself */
+        lastLinkStorage.lastLink = post.url
         showDetailsCoordinatorWithUrl(url: post.url)
     }
 
@@ -71,6 +77,7 @@ extension RedditListCoordinator: RedditListViewControllerDelegate {
 
 extension RedditListCoordinator: DetailCoordinatorDelegate {
     func didStop() {
+        lastLinkStorage.lastLink = nil
         childCoordinator = nil
     }
 }

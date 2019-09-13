@@ -30,6 +30,8 @@
 		4979A8ED232BD96300BB7E1B /* ThubmnailLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4979A8EC232BD96300BB7E1B /* ThubmnailLoader.swift */; };
 		4979A8F1232BE9F100BB7E1B /* ThumbnailLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4979A8F0232BE9F100BB7E1B /* ThumbnailLoaderProtocol.swift */; };
 		4979A8F3232C0D2C00BB7E1B /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4979A8F2232C0D2C00BB7E1B /* DetailViewCoordinator.swift */; };
+		4979A8F7232C28F400BB7E1B /* LastLinkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4979A8F6232C28F400BB7E1B /* LastLinkStorage.swift */; };
+		4979A8F9232C2B9E00BB7E1B /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4979A8F8232C2B9E00BB7E1B /* UINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		4979A8EC232BD96300BB7E1B /* ThubmnailLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThubmnailLoader.swift; sourceTree = "<group>"; };
 		4979A8F0232BE9F100BB7E1B /* ThumbnailLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLoaderProtocol.swift; sourceTree = "<group>"; };
 		4979A8F2232C0D2C00BB7E1B /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
+		4979A8F6232C28F400BB7E1B /* LastLinkStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastLinkStorage.swift; sourceTree = "<group>"; };
+		4979A8F8232C2B9E00BB7E1B /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				49718298232BA8610036908C /* APIRequest.swift */,
 				4979A8EC232BD96300BB7E1B /* ThubmnailLoader.swift */,
 				4979A8F0232BE9F100BB7E1B /* ThumbnailLoaderProtocol.swift */,
+				4979A8F6232C28F400BB7E1B /* LastLinkStorage.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				4971829B232BA9250036908C /* String.swift */,
+				4979A8F8232C2B9E00BB7E1B /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,8 +329,10 @@
 				49718280232B96AB0036908C /* RedditListCoordinator.swift in Sources */,
 				49718277232B91390036908C /* AppCoordinator.swift in Sources */,
 				49718299232BA8610036908C /* APIRequest.swift in Sources */,
+				4979A8F7232C28F400BB7E1B /* LastLinkStorage.swift in Sources */,
 				49718286232B9FC80036908C /* RedditListPresenterProtocol.swift in Sources */,
 				4979A8F3232C0D2C00BB7E1B /* DetailViewCoordinator.swift in Sources */,
+				4979A8F9232C2B9E00BB7E1B /* UINavigationController.swift in Sources */,
 				4971829C232BA9250036908C /* String.swift in Sources */,
 				4971827E232B96810036908C /* RedditListViewController.swift in Sources */,
 				4979A8ED232BD96300BB7E1B /* ThubmnailLoader.swift in Sources */,
