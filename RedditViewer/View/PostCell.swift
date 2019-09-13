@@ -20,11 +20,17 @@ class PostCell: UITableViewCell {
 
     @IBOutlet weak var commentsLabel: UILabel!
 
+    @IBOutlet weak var thumbnailWidthConstraint: NSLayoutConstraint!
+
+    @IBOutlet weak var thumbnailHeightConstraint: NSLayoutConstraint!
+    
     func setUpWith(post: ChildData) {
-        layoutIfNeeded()
-        authorLabel.text = post.author
+        thumbnailWidthConstraint.constant = CGFloat(post.thumbnailWidth ?? 150)
+        thumbnailHeightConstraint.constant = CGFloat(post.thumbnailHeight ?? 150)
+        authorLabel.text = "😎\(post.author)"
         titleLabel.text = post.title
-        commentsLabel.text = "🔖 \(post.numComments)"
-        dateLabel.text = "\(post.hoursFromNow) hours ago"
+        commentsLabel.text = "💬\(post.numComments)"
+        dateLabel.text = "⏱\(post.hoursFromNow) hours ago"
+        layoutIfNeeded()
     }
 }

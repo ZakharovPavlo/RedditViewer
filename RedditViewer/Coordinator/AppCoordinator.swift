@@ -40,7 +40,7 @@ class AppCoordinator: NSObject, Coordinator {
 }
 
 extension AppCoordinator: RedditListCoordinatorDelegate {
-    func didStop() {
+    func redditListCoordinatorDidStop(redditListCoordinator: RedditListCoordinator) {
         childCoordinator = nil
     }
 }

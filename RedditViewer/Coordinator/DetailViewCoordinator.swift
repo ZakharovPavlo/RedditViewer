@@ -11,7 +11,7 @@ import UIKit
 import SafariServices
 
 protocol DetailCoordinatorDelegate: class {
-    func didStop()
+    func detailCoordinatorDidStop(detailCoordinator: DetailCoordinator)
 }
 
 class DetailCoordinator: NSObject, Coordinator {
@@ -34,7 +34,7 @@ class DetailCoordinator: NSObject, Coordinator {
     }
 
     func stop() {
-        delegate?.didStop()
+        delegate?.detailCoordinatorDidStop(detailCoordinator: self)
     }
 }
 

@@ -20,9 +20,10 @@ class APIService: APIServiceProtocol {
     func getTopPosts(after: String?, onSuccess: @escaping TopPostsCallback,
                      onError: ErrorCallback?) {
         makeHTTPGetRequest(request: .top(after: after), onSuccess: { data in
-            let posts = try! JSONDecoder().decode(Posts.self, from: data)// else {
-               // onError?(.malformedJson)
-               // return
+            guard let posts = try? JSONDecoder().decode(Posts.self, from: data) else {
+               onError?(.malformedJson)
+               return
+            }
 
             onSuccess(posts)
         }, onError: onError)

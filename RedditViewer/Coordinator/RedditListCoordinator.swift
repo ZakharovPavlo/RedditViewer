@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol RedditListCoordinatorDelegate: class {
-    func didStop()
+    func redditListCoordinatorDidStop(redditListCoordinator: RedditListCoordinator)
 }
 
 class RedditListCoordinator: NSObject, Coordinator {
@@ -57,7 +57,7 @@ class RedditListCoordinator: NSObject, Coordinator {
 
     func stop() {
         presentedViewController = nil
-        delegate?.didStop()
+        delegate?.redditListCoordinatorDidStop(redditListCoordinator: self)
     }
 }
 
@@ -80,7 +80,7 @@ extension RedditListCoordinator: RedditListViewControllerDelegate {
 }
 
 extension RedditListCoordinator: DetailCoordinatorDelegate {
-    func didStop() {
+    func detailCoordinatorDidStop(detailCoordinator: DetailCoordinator) {
         lastLinkStorage.lastLink = nil
         childCoordinator = nil
     }

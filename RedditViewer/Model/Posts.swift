@@ -32,6 +32,8 @@ struct Child: Codable {
 struct ChildData: Codable {
     let title: String
     let thumbnail: String
+    let thumbnailWidth: Int?
+    let thumbnailHeight: Int?
     let created: Int
     let author: String
     let numComments: Int
@@ -51,6 +53,8 @@ struct ChildData: Codable {
     enum CodingKeys: String, CodingKey {
         case title
         case thumbnail
+        case thumbnailWidth = "thumbnail_width"
+        case thumbnailHeight = "thumbnail_height"
         case created
         case author
         case numComments = "num_comments"

@@ -32,7 +32,7 @@ class RedditListViewController: UIViewController, RedditListViewProtocol {
         super.viewDidLoad()
         title = "Posts"
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 300
         activityIndicator.startAnimating()
         presenter.requestRedditData()
     }
