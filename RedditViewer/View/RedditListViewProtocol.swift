@@ -10,5 +10,8 @@ import Foundation
 
 protocol RedditListViewProtocol: class {
     func showError(error: APIError)
+
     func reloadData()
+
+    func animateSpinner()
 }

@@ -12,9 +12,9 @@ import UIKit
 protocol RedditListPresenterProtocol {
     var posts: [ChildData] { get }
 
-    var isUpdatingData: Bool { get }
-
     func requestRedditData()
 
     func loadImage(withUrlString urlString: String, toImageView imageView: UIImageView)
+
+    func tableViewDidScrollToEnd()
 }

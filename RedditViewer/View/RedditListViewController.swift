@@ -45,6 +45,10 @@ class RedditListViewController: UIViewController, RedditListViewProtocol {
         self.present(alertVC, animated: true, completion: nil)
     }
 
+    func animateSpinner() {
+        activityIndicator.startAnimating()
+    }
+
     func reloadData() {
         activityIndicator.stopAnimating()
         tableView.reloadData()
@@ -70,9 +74,8 @@ extension RedditListViewController: UITableViewDelegate {
         guard tableView.numberOfRows(inSection: 0) != 0 else { return }
         let isReachingEnd = scrollView.contentOffset.y >= 0
             && scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)
-        if isReachingEnd && !presenter.isUpdatingData {
-            activityIndicator.startAnimating()
-            presenter.requestRedditData()
+        if isReachingEnd {
+            presenter.tableViewDidScrollToEnd()
         }
     }
 

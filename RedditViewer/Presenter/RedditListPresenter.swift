@@ -14,18 +14,11 @@ class RedditListPresenter: RedditListPresenterProtocol {
 
     private var thumbnailLoader: ThumbnailLoaderProtocol
 
-    private var afterLinks = [String]()
-
-    private var after: String? {
-        didSet {
-            guard let after = after else { return }
-            afterLinks.append(after)
-        }
-    }
+    private var after: String?
 
     var posts = [ChildData]()
 
-    var isUpdatingData = false
+    private var isUpdatingData = false
 
     weak var view: RedditListViewProtocol?
 
@@ -52,6 +45,13 @@ class RedditListPresenter: RedditListPresenterProtocol {
 
     func loadImage(withUrlString urlString: String, toImageView imageView: UIImageView) {
         thumbnailLoader.setThumbnailFrom(urlString: urlString, toImageView: imageView)
+    }
+
+    func tableViewDidScrollToEnd() {
+        if !isUpdatingData {
+            view?.animateSpinner()
+            requestRedditData()
+        }
     }
 
     private func parsePostsData(allPostsData: Posts) {

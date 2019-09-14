@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIImage {
-    static func placehilder() -> UIImage {
+    static func placeholder() -> UIImage {
         return UIImage(named: "noImage") ?? UIImage()
     }
 }
