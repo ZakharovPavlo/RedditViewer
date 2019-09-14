@@ -29,7 +29,7 @@ struct Child: Codable {
 }
 
 // MARK: - ChildData
-struct ChildData: Codable {
+struct ChildData: Codable, Equatable {
     let title: String
     let thumbnail: String
     let thumbnailWidth: Int?
@@ -39,7 +39,6 @@ struct ChildData: Codable {
     let numComments: Int
     let url: String
     let createdUTC: Int
-    let preview: Preview?
 
     var hoursFromNow: Int {
         let dateInt = createdUTC
@@ -59,28 +58,6 @@ struct ChildData: Codable {
         case author
         case numComments = "num_comments"
         case url
-        case preview
         case createdUTC = "created_utc"
     }
-}
-
-// MARK: - Preview
-struct Preview: Codable {
-    let images: [Image]
-    let enabled: Bool
-
-    enum CodingKeys: String, CodingKey {
-        case images, enabled
-    }
-}
-
-// MARK: - Image
-struct Image: Codable {
-    let source: ResizedIcon
-}
-
-// MARK: - ResizedIcon
-struct ResizedIcon: Codable {
-    let url: String
-    let width, height: Int
 }

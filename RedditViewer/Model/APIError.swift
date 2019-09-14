@@ -8,7 +8,13 @@
 
 import Foundation
 
-enum APIError: CustomStringConvertible {
+enum APIError: CustomStringConvertible, CaseIterable, Equatable {
+    static var allCases: [APIError] {
+        return [.httpError(statusCode: 0), .noData, .requestPathError, .malformedJson]
+    }
+
+    typealias AllCases = [APIError]
+
     case httpError(statusCode: Int)
     case noData
     case requestPathError

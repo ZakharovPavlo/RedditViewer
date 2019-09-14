@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ThubmnailLoader: ThumbnailLoaderProtocol {
+class ThumbmnailLoader: ThumbnailLoaderProtocol {
     private let queue = DispatchQueue(label: "thumbnailQueue")
 
     private var thumbnailsInMemoryCache = NSCache<NSString, UIImage>()
