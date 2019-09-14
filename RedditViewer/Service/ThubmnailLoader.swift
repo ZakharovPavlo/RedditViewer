@@ -33,8 +33,7 @@ class ThubmnailLoader: ThumbnailLoaderProtocol {
             guard let url = URL(string: urlString as String),
                 let data = try? Data(contentsOf: url),
                 let image = UIImage(data: data) else {
-                    imageView.contentMode = .scaleToFill
-                    self.setImage(UIImage.placehilder(), toImageView: imageView)
+                    self.setImage(UIImage.placehilder(), toImageView: imageView, contentMode: .scaleToFill)
                     return
             }
 
@@ -42,12 +41,14 @@ class ThubmnailLoader: ThumbnailLoaderProtocol {
                 guard let self = self else { return }
                 self.thumbnailsInMemoryCache.setObject(image, forKey: urlString)
             }
+            
             self.setImage(image, toImageView: imageView)
         }
     }
 
-    private func setImage(_ image:UIImage, toImageView imageView: UIImageView) {
+    private func setImage(_ image:UIImage, toImageView imageView: UIImageView, contentMode: UIView.ContentMode = .scaleAspectFill) {
         DispatchQueue.main.async {
+            imageView.contentMode = contentMode
             imageView.image = image
         }
     }
