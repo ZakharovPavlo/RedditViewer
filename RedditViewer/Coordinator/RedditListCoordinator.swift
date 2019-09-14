@@ -26,13 +26,13 @@ class RedditListCoordinator: NSObject, Coordinator {
 
     private var childCoordinator: Coordinator?
 
-    private var lastLinkStorage: LastLinkStorage
+    private var lastLinkStorage: LastLinkStorageProtocol
 
     fileprivate enum Constants {
         static let redditListStoryboard = "RedditListViewController"
     }
 
-    init(context: UIViewController, lastLinkStorage: LastLinkStorage) {
+    init(context: UIViewController, lastLinkStorage: LastLinkStorageProtocol) {
         self.context = context
         self.lastLinkStorage = lastLinkStorage
         apiService = APIService()

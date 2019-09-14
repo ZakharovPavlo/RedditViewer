@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LastLinkStorage  {
+class LastLinkStorage: LastLinkStorageProtocol {
     var lastLink: String?
 
     func storeLastLink() {

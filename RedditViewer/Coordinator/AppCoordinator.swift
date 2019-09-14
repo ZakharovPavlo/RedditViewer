@@ -15,7 +15,7 @@ class AppCoordinator: NSObject, Coordinator {
 
     var childCoordinator: Coordinator?
 
-    var lastLinkStorage: LastLinkStorage
+    var lastLinkStorage: LastLinkStorageProtocol
     
     init(context: UIViewController) {
         self.context = context

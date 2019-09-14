@@ -33,7 +33,8 @@ class ThubmnailLoader: ThumbnailLoaderProtocol {
             guard let url = URL(string: urlString as String),
                 let data = try? Data(contentsOf: url),
                 let image = UIImage(data: data) else {
-                    self.setImage(UIImage(), toImageView: imageView)
+                    imageView.contentMode = .scaleToFill
+                    self.setImage(UIImage.placehilder(), toImageView: imageView)
                     return
             }
 
