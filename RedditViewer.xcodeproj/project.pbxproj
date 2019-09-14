@@ -15,7 +15,7 @@
 		49718279232B914C0036908C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49718278232B914C0036908C /* Coordinator.swift */; };
 		4971827E232B96810036908C /* RedditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971827D232B96810036908C /* RedditListViewController.swift */; };
 		49718280232B96AB0036908C /* RedditListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971827F232B96AB0036908C /* RedditListCoordinator.swift */; };
-		49718284232B9FB30036908C /* ReddiListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49718283232B9FB30036908C /* ReddiListPresenter.swift */; };
+		49718284232B9FB30036908C /* RedditListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49718283232B9FB30036908C /* RedditListPresenter.swift */; };
 		49718286232B9FC80036908C /* RedditListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49718285232B9FC80036908C /* RedditListPresenterProtocol.swift */; };
 		49718288232B9FDA0036908C /* RedditListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49718287232B9FDA0036908C /* RedditListViewProtocol.swift */; };
 		4971828A232B9FFC0036908C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49718289232B9FFC0036908C /* APIService.swift */; };
@@ -57,7 +57,7 @@
 		49718278232B914C0036908C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4971827D232B96810036908C /* RedditListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListViewController.swift; sourceTree = "<group>"; };
 		4971827F232B96AB0036908C /* RedditListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListCoordinator.swift; sourceTree = "<group>"; };
-		49718283232B9FB30036908C /* ReddiListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReddiListPresenter.swift; sourceTree = "<group>"; };
+		49718283232B9FB30036908C /* RedditListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListPresenter.swift; sourceTree = "<group>"; };
 		49718285232B9FC80036908C /* RedditListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListPresenterProtocol.swift; sourceTree = "<group>"; };
 		49718287232B9FDA0036908C /* RedditListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListViewProtocol.swift; sourceTree = "<group>"; };
 		49718289232B9FFC0036908C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -139,9 +139,9 @@
 		4971826E232B90200036908C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				497182B5232BBC900036908C /* PostCell.swift */,
 				4971827D232B96810036908C /* RedditListViewController.swift */,
 				49718287232B9FDA0036908C /* RedditListViewProtocol.swift */,
-				497182B5232BBC900036908C /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 		4971826F232B90360036908C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				49718283232B9FB30036908C /* ReddiListPresenter.swift */,
+				49718283232B9FB30036908C /* RedditListPresenter.swift */,
 				49718285232B9FC80036908C /* RedditListPresenterProtocol.swift */,
 			);
 			path = Presenter;
@@ -183,8 +183,8 @@
 			children = (
 				49718276232B91390036908C /* AppCoordinator.swift */,
 				49718278232B914C0036908C /* Coordinator.swift */,
-				4971827F232B96AB0036908C /* RedditListCoordinator.swift */,
 				4979A8F2232C0D2C00BB7E1B /* DetailViewCoordinator.swift */,
+				4971827F232B96AB0036908C /* RedditListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 				497182B2232BB1440036908C /* Posts.swift in Sources */,
 				4971828C232BA00C0036908C /* APIServiceProtocol.swift in Sources */,
 				49718279232B914C0036908C /* Coordinator.swift in Sources */,
-				49718284232B9FB30036908C /* ReddiListPresenter.swift in Sources */,
+				49718284232B9FB30036908C /* RedditListPresenter.swift in Sources */,
 				49718297232BA5D50036908C /* APIError.swift in Sources */,
 				4979A8F1232BE9F100BB7E1B /* ThumbnailLoaderProtocol.swift in Sources */,
 				497182B6232BBC900036908C /* PostCell.swift in Sources */,
