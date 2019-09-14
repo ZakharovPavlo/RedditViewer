@@ -9,6 +9,11 @@
 import XCTest
 @testable import RedditViewer
 
+/*
+ Due to the time constraints only presenter class is covered with tests
+ Service classes and Coordinators can be covered with unit and UI tests in similar manner
+ */
+
 class RedditListPresenterTests: XCTestCase {
 
     var objectUnderTest: RedditListPresenter!
@@ -45,4 +50,11 @@ class RedditListPresenterTests: XCTestCase {
 
     }
 
+    func testloadImage() {
+        let mockImage = UIImage()
+        let imageView = UIImageView()
+        mockThumbnailLoader.resultImage = mockImage
+        objectUnderTest.loadImage(withUrlString: "", toImageView: imageView)
+        XCTAssertEqual(imageView.image, mockImage)
+    }
 }
