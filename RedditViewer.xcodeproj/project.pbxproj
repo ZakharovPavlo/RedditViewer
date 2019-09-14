@@ -200,9 +200,9 @@
 		49718274232B90830036908C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				49718255232B90090036908C /* Assets.xcassets */,
 				49718252232B90080036908C /* RedditListViewController.storyboard */,
 				49718257232B90090036908C /* LaunchScreen.storyboard */,
-				49718255232B90090036908C /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
